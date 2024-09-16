@@ -41,8 +41,6 @@ public:
 private:
   void _get_file_name_type(const std::string &file_path, std::string *filenae, std::string *content_type);
 private:
-  static const std::string boundary_prefix_;
-  static const std::string rand_chars_;
   std::string boundary_;
   std::string body_content_;
   std::vector<std::pair<std::string, std::string> > params_;

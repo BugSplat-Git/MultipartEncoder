@@ -8,12 +8,12 @@
 namespace web{
 namespace http{
 
-const std::string MultipartParser::boundary_prefix_("----CppRestSdkClient");
-const std::string MultipartParser::rand_chars_("0123456789"
-                                               "abcdefghijklmnopqrstuvwxyz"
-                                               "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 MultipartParser::MultipartParser()
 {
+  const std::string boundary_prefix_("----CppRestSdkClient");
+  const std::string rand_chars_("0123456789"
+    "abcdefghijklmnopqrstuvwxyz"
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
   int i = 0;
   int len = rand_chars_.size();
   boundary_ = boundary_prefix_;
